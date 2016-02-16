@@ -59,20 +59,20 @@
                                     </imageView>
                                 </subviews>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="idle1" translatesAutoresizingMaskIntoConstraints="NO" id="IbD-ur-UpV">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="idle1" translatesAutoresizingMaskIntoConstraints="NO" id="IbD-ur-UpV" customClass="MonsterImage" customModule="myLittleMonster" customModuleProvider="target">
                                 <rect key="frame" x="-5" y="182" width="552" height="375"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="375" id="Avv-bV-PAC"/>
                                     <constraint firstAttribute="width" constant="552" id="Ha1-gn-gK9"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="hss-fR-cmQ" userLabel="Food/heart Stack">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="fillEqually" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="hss-fR-cmQ" userLabel="Food/heart Stack">
                                 <rect key="frame" x="155" y="110" width="290" height="98"/>
                                 <subviews>
-                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="Jd2-aX-xFi" customClass="DragImage" customModule="myLittleMonster" customModuleProvider="target">
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="Jd2-aX-xFi" customClass="DragImage" customModule="myLittleMonster" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="95" height="98"/>
                                     </imageView>
-                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food" translatesAutoresizingMaskIntoConstraints="NO" id="d0o-je-kku" customClass="DragImage" customModule="myLittleMonster" customModuleProvider="target">
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="food" translatesAutoresizingMaskIntoConstraints="NO" id="d0o-je-kku" customClass="DragImage" customModule="myLittleMonster" customModuleProvider="target">
                                         <rect key="frame" x="195" y="0.0" width="95" height="98"/>
                                     </imageView>
                                 </subviews>
@@ -91,6 +91,20 @@
                                     </mask>
                                 </variation>
                             </stackView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezD-t9-SW3">
+                                <rect key="frame" x="148" y="263" width="304" height="74"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="74" id="iH0-pt-dK5"/>
+                                    <constraint firstAttribute="width" constant="304" id="uxH-ro-OnM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="35"/>
+                                <state key="normal" title="Save Your Monster!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressedRestartGameButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sCN-Bo-Quz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -98,6 +112,7 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IbD-ur-UpV" secondAttribute="bottom" constant="43" id="6sb-EV-cLc"/>
                             <constraint firstItem="J7q-wa-ukj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="8oO-ST-jV5"/>
                             <constraint firstItem="YRI-VP-ODL" firstAttribute="centerY" secondItem="J7q-wa-ukj" secondAttribute="centerY" id="99V-8K-y3L"/>
+                            <constraint firstItem="ezD-t9-SW3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mfb-mD-bVn"/>
                             <constraint firstItem="3ye-a6-KST" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MhY-Fb-YZV"/>
                             <constraint firstItem="3ye-a6-KST" firstAttribute="top" secondItem="hss-fR-cmQ" secondAttribute="bottom" constant="8" id="RFT-JU-ysh"/>
                             <constraint firstItem="hss-fR-cmQ" firstAttribute="top" secondItem="J7q-wa-ukj" secondAttribute="bottom" constant="15" id="RQI-c9-0vk"/>
@@ -107,6 +122,7 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3ye-a6-KST" secondAttribute="bottom" id="e62-Qb-6tb"/>
                             <constraint firstItem="J7q-wa-ukj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fzh-Hm-uuq"/>
                             <constraint firstAttribute="trailing" secondItem="3ye-a6-KST" secondAttribute="trailing" id="ktR-38-W2z"/>
+                            <constraint firstItem="ezD-t9-SW3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="s1G-Rr-my8"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -127,10 +143,15 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="4ue-kw-K8v"/>
                     <connections>
                         <outlet property="foodImage" destination="d0o-je-kku" id="UWl-XG-4VM"/>
                         <outlet property="heartImage" destination="Jd2-aX-xFi" id="zqW-uh-GE0"/>
                         <outlet property="monsterImage" destination="IbD-ur-UpV" id="gjk-2h-3NM"/>
+                        <outlet property="penalty1Image" destination="fP0-DE-etK" id="9My-H8-t0S"/>
+                        <outlet property="penalty2Image" destination="OIz-pz-mRS" id="rei-q1-8Ab"/>
+                        <outlet property="penalty3Image" destination="YM2-Iu-V1S" id="6dZ-G7-f81"/>
+                        <outlet property="restartGameButton" destination="ezD-t9-SW3" id="drY-Jw-qd4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
